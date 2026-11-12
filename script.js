@@ -7,6 +7,9 @@ const tontonGifs = [
   "https://media.tenor.com/U0OPHZokzkUAAAAi/what-seriously.gif",
   "https://media.tenor.com/WKXMmSk3JJsAAAAi/chubby-tonton.gif",
   "https://media.tenor.com/ZHWV13jliTAAAAAi/chubby-tonton.gif",
+  "https://media.tenor.com/Jkha__Yjf0oAAAAi/sad-depression.gif",
+  "https://media.tenor.com/U0OPHZokzkUAAAAi/what-seriously.gif",
+  "https://media.tenor.com/ZHWV13jliTAAAAAi/chubby-tonton.gif"
 ];
 
 const title = document.querySelector(".title");
