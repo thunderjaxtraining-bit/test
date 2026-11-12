@@ -18,7 +18,7 @@ const yesBtn = document.querySelector(".btn-yes");
 const noBtn = document.querySelector(".btn-no");
 const img = document.querySelector(".img");
 
-const MAX_IMAGES = 8;
+const MAX_IMAGES = 9;
 let play = true;
 let noCount = 0;
 let noButtonSize = 1;
@@ -50,7 +50,7 @@ title.style.lineHeight = "1.5";
 noBtn.addEventListener("click", () => {
   if (play) {
     noCount++;
-    const imageIndex = Math.min(noCount, MAX_IMAGES);
+    const imageIndex = nocount - 1;
     changeImage(imageIndex);
     resizeYesButton();
     shrinkNoButton();
