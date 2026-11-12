@@ -50,8 +50,8 @@ title.style.lineHeight = "1.5";
 noBtn.addEventListener("click", () => {
   if (play) {
     noCount++;
-    const imageIndex = (noCount - 1) % tontonGifs.length;
-    changeImage(imageIndex);
+   const imageIndex = (noCount - 1) % tontonGifs.length;
+changeImage(imageIndex);
     resizeYesButton();
     shrinkNoButton();
     updateNoButtonText();
@@ -85,18 +85,9 @@ function generateMessage(noCount) {
 }
 
 function changeImage(image) {
-    const imageURL = image === "yes"
-        ? "YOUR_YES_GIF_URL"
+    img.src = image === "yes"
+        ? "PASTE_YOUR_ORIGINAL_YES_GIF_LINK_HERE"
         : tontonGifs[image];
-
-    if (!imageURL) return;
-
-    // Reload the GIF so its animation starts again
-    img.removeAttribute("src");
-
-    requestAnimationFrame(() => {
-        img.src = imageURL;
-    });
 }
 
 function updateNoButtonText() {
