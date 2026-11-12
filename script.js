@@ -15,7 +15,7 @@ const yesBtn = document.querySelector(".btn-yes");
 const noBtn = document.querySelector(".btn-no");
 const img = document.querySelector(".img");
 
-const MAX_IMAGES = 5;
+const MAX_IMAGES = 8;
 let play = true;
 let noCount = 0;
 let noButtonSize = 1;
@@ -74,6 +74,9 @@ function generateMessage(noCount) {
     "PLEASEE IM SORRYYY 😭",
     "IM SORRY LIANNN 💔",
     "SORRY NAAA PLSSSSS 😭💔",
+    "SORRY NA DI KO NA UULITIN 😭💔",
+    "SORRY NA TALAGA 😭💔",
+    "PLEASEEEE LIANNN😭💔",
   ];
   return messages[Math.min(noCount, messages.length - 1)];
 }
