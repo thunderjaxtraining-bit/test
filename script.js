@@ -50,7 +50,7 @@ title.style.lineHeight = "1.5";
 noBtn.addEventListener("click", () => {
   if (play) {
     noCount++;
-    const imageIndex = nocount - 1;
+    const imageIndex = (noCount - 1) % tontonGifs.length;
     changeImage(imageIndex);
     resizeYesButton();
     shrinkNoButton();
@@ -85,10 +85,18 @@ function generateMessage(noCount) {
 }
 
 function changeImage(image) {
-  img.src =
-    image === "yes"
-      ? "https://media.tenor.com/ACi1vdjNbpIAAAAi/%EC%9C%A0%ED%83%80-%ED%86%A4%ED%86%A4%ED%94%84%EB%A0%8C%EC%A6%88.gif"
-      : tontonGifs[image];
+    const imageURL = image === "yes"
+        ? "YOUR_YES_GIF_URL"
+        : tontonGifs[image];
+
+    if (!imageURL) return;
+
+    // Reload the GIF so its animation starts again
+    img.removeAttribute("src");
+
+    requestAnimationFrame(() => {
+        img.src = imageURL;
+    });
 }
 
 function updateNoButtonText() {
