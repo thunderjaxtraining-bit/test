@@ -87,7 +87,7 @@ function generateMessage(noCount) {
 
 function changeImage(image) {
     if (image === "yes") {
-        img.src = "YOUR_YES_GIF_LINK";
+        img.src = tontonGifs[0];
     } else {
         img.src = tontonGifs[image];
     }
