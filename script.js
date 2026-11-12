@@ -86,11 +86,10 @@ function generateMessage(noCount) {
 }
 
 function changeImage(image) {
-    if (image === "yes") {
-        img.src = tontonGifs[0];
-    } else {
-        img.src = tontonGifs[image];
-    }
+    img.src =
+        image === "yes"
+            ? "https://media.tenor.com/ACi1vdjNbpIAAAAi/%EC%9C%A0%ED%83%80-%ED%86%A4%ED%86%A4%ED%94%84%EB%A0%8C%EC%A6%88.gif"
+            : tontonGifs[image];
 }
 
 function updateNoButtonText() {
